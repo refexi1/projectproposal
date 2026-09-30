@@ -12,22 +12,22 @@ Starter template for the **Development of AI Applications** course final group p
 ## Problem
 
 ### Intended users
-People who might need help to recycle products or material and are unsure what is the proper way to recycle it.
+People who might need help to recycle items and are unsure what is the proper way to recycle it.
 
 ### Problem statement
-Recognizing the product that needs to be recycled and guides the user the right recycling method.
+Recognizing the item that needs to be recycled and guides the user the right recycling method.
 
 ### Why AI is appropriate
-It will inform the user what is the appropriate way to recycle the product. 
+It will inform the user what is the appropriate way to recycle the item. 
 
 ## Solution
 
-Create a AI application where you can photograph a product and the AI will analyze it and prodive information how to recycle it. 
+Create a AI application where you can photograph an item and AI will analyze it and provide information how to recycle it. 
 
 ## Main user workflow
 
-1. **User Input:** The user submits a prompt or query via the Gradio user interface.
-2. **Processing & Guardrails:** The application service layer (`src/services/ai_service.py`) validates and formats the request.
+1. **User Input:** User uploads an image of the product/item using Gradio's User Interface
+2. **Processing & Guardrails:** The application service layer (`app/services.py`) validates and formats the request.
 3. **Model Response:** The model client calls Ollama locally and returns the response back through the service layer to the UI.
 
 ## Architecture
