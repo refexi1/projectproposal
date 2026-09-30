@@ -4,24 +4,25 @@ Starter template for the **Development of AI Applications** course final group p
 
 ## Team members
 
-- YASER AL-DALAWI (yasserdalawi401@gmail.com)
-- Member 2 Name (email@example.com)
-- Member 3 Name (email@example.com)
+- YASER AL-DALAWI (yaser.al-dalawi@student.hamk.fi)
+- Vesa Wahlström (vesa.wahlstrom@student.hamk.fi)
+- Nuutti Tikka (nuutti.tikka@student.hamk.fi)
+- Sanna Poikonen (sanna.poikonen@student.hamk.fi)
 
 ## Problem
 
 ### Intended users
-Who are the primary target users of this application?
+People who might need help to recycle products or material and are unsure what is the proper way to recycle it.
 
 ### Problem statement
-What specific problem does this application solve for those users?
+Recognizing the product that needs to be recycled and guides the user the right recycling method.
 
 ### Why AI is appropriate
-Why does this problem require AI / LLM capabilities rather than traditional deterministic software?
+It will inform the user what is the appropriate way to recycle the product. 
 
 ## Solution
 
-Briefly describe your application, its primary value proposition, and how it addresses the problem statement above.
+Create a AI application where you can photograph a product and the AI will analyze it and prodive information how to recycle it. 
 
 ## Main user workflow
 
