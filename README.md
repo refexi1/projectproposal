@@ -1,4 +1,4 @@
-# Project name
+# Cycle The Right Way
 
 Starter template for the **Development of AI Applications** course final group project.
 
@@ -62,7 +62,7 @@ Select at least one additional capability to implement for your final project:
 - [ ] Model Context Protocol (MCP)
 - [ ] Agentic workflow (Model-selected actions based on observations)
 - [ ] Memory / Persistent state
-- [ ] Multimodal interaction (Text + Images)
+- [x] Multimodal interaction (Text + Images)
 - [ ] Other: ______________________
 
 ### Capability justification
@@ -128,7 +128,9 @@ pytest
 
 ## Evaluation
 
-Describe your evaluation methodology and summarize key results. Starter test cases can be found in [`evaluation/test_cases.json`](evaluation/test_cases.json).
+Correctly recognizing the object from test images (e.g., milk carton, battery, plastic bottle or cardboard box).
+Successfully identifying multi-part materials (e.g., glass bottle with a metal cap).
+Correctly identifying dangerous items (batteries, electronics, chemicals) and directing them to special collection points rather than general waste.
 
 Refer to [`evaluation/README.md`](evaluation/README.md) for guidelines on defining success, edge cases, and failure scenarios.
 
