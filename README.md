@@ -134,8 +134,16 @@ Refer to [`evaluation/README.md`](evaluation/README.md) for guidelines on defini
 
 ## Known limitations
 
-- Highlight known system limitations, unhandled edge cases, or boundaries of current capabilities.
+
+- The AI may incorrectly recognize some waste items.
+- Similar-looking materials can be difficult to classify correctly.
+- Image quality, lighting, and camera angle may affect recognition accuracy.
+- Recycling instructions may vary depending on the user's location.
 
 ## Future improvements
 
-- List planned feature enhancements, architectural refactorings, or future capabilities.
+- Add support for more waste categories.
+- Provide recycling instructions based on the user's location.
+- Improve the user interface to make the application easier to use.
+
+
