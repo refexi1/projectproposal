@@ -18,17 +18,17 @@ Students who would need assistance with study material and understand it better
 Providing AI-assistance on study material, the material has to be inputted for the AI to analyze it(PDF for example)
 
 ### Why AI is appropriate
-AI can turn the assignment to more understandable form for the students
+AI can summarize large amounts of text, explain difficult concepts in simpler terms, 
 
 ## Solution
 
-Develop an AI-appliation, that helps students with their study material
+Develop a user-friendly AI application (AI Study Assistant) that helps students learn better. Users can upload PDF study materials, generate summaries and ask questions about the content
 
 ## Main user workflow
 
-1. **User Input:** User downloads the material into the application
-2. **Processing & Guardrails:** The Application's AI will analyze the text or file. RAG will be utilized to search the right spots for the questions.
-3. **Model Response:** Language model will
+1. **User Input:** The user uploads a PDF study document or pastes text into the application.
+2. **Processing & Guardrails:** The application reads and processes the text. RAG (Retrieval-Augmented Generation) searches the uploaded material for relevant information.
+3. **Model Response:** The language model creates an answer and provides source references showing where the information was found in the text.
 
 ## Architecture
 
@@ -41,32 +41,32 @@ Gradio UI (app/ui.py)
   ↓
 Application / AI Service (src/services/ai_service.py)
   ↓
-Model Client (src/models/model_client.py)
+Model Client / RAG (src/models/model_client.py)
   ↓
-Ollama (Local LLM Server)
+Ollama/RAG Database (Local LLM Server)
 ```
 
-> **Core Architectural Rule:** The user interface must NEVER communicate directly with the model client or Ollama. All interactions must pass through the service layer (`ai_service.py`).
+> **Core Architectural Rule:** The user interface must NEVER communicate directly with the model client or external APIs. All interactions must pass through the service layer (`ai_service.py`).
 
 ## Model
 
-- **Model used:** e.g., `llama3.2` (or specified local Ollama model)
-- **Selection rationale:** Why was this specific model chosen for your project (e.g., lightweight, performance, context size)?
+- **Model used:** LLM API or Ollama model like llama3.2
+- **Selection rationale:** Chosen for its good context window, reliability in summarizing long text, and ability to generate accurate source references.
 
 ## Additional AI capability
 
 Select at least one additional capability to implement for your final project:
 
-- [ ] RAG (Retrieval-Augmented Generation)
+- [x] RAG (Retrieval-Augmented Generation)
 - [ ] Tools / External API integration
 - [ ] Model Context Protocol (MCP)
 - [ ] Agentic workflow (Model-selected actions based on observations)
 - [ ] Memory / Persistent state
-- [x] Multimodal interaction (Text + Images)
+- [] Multimodal interaction (Text + Images)
 - [ ] Other: ______________________
 
 ### Capability justification
-Explain why the selected capability is useful and necessary for your application's user problem.
+RAG is necessary to ensure the AI answers questions based strictly on the uploaded study material without making up information (hallucinating). It allows the app to find specific sections in the document and show clear references to the student.
 
 ## Setup
 
@@ -128,24 +128,21 @@ pytest
 
 ## Evaluation
 
-Correctly recognizing the object from test images (e.g., milk carton, battery, plastic bottle or cardboard box).
-Successfully identifying multi-part materials (e.g., glass bottle with a metal cap).
-Correctly identifying dangerous items (batteries, electronics, chemicals) and directing them to special collection points rather than general waste.
+Check that the application reads PDF files correctly and handles errors (e.g., broken files or API issues).
+Evaluate answer accuracy by checking if the RAG search finds the right parts of the document and provides accurate source references.
 
 Refer to [`evaluation/README.md`](evaluation/README.md) for guidelines on defining success, edge cases, and failure scenarios.
 
 ## Known limitations
 
 
-- The AI may incorrectly recognize some waste items.
-- Similar-looking materials can be difficult to classify correctly.
-- Image quality, lighting, and camera angle may affect recognition accuracy.
-- Recycling instructions may vary depending on the user's location.
+- Splitting and indexing very large PDF files might take time.
+- The model may struggle if the uploaded PDF contains low-quality or poorly formatted text.
+
 
 ## Future improvements
 
-- Add support for more waste categories.
-- Provide recycling instructions based on the user's location.
-- Improve the user interface to make the application easier to use.
+- Add automatic practice question generation.
+- Support saving chat history and student notes.
 
 
