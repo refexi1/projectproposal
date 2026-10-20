@@ -62,7 +62,7 @@ Select at least one additional capability to implement for your final project:
 - [ ] Model Context Protocol (MCP)
 - [ ] Agentic workflow (Model-selected actions based on observations)
 - [ ] Memory / Persistent state
-- [] Multimodal interaction (Text + Images)
+- [ ] Multimodal interaction (Text + Images)
 - [ ] Other: ______________________
 
 ### Capability justification
